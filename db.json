@@ -1,0 +1,58 @@
+{
+  "contacts": [
+    {
+      "id": 1,
+      "firstName": "Max",
+      "lastName": "Mezalon",
+      "avatar": "https://jmezalon.github.io/all-about-Max/images/Max_sitting.PNG",
+      "phoneNumber": "347-486-8720",
+      "email": "jmezalon@gmail.com",
+      "favorite": true
+    },
+    {
+      "id": 2,
+      "firstName": "Joseph",
+      "lastName": "Pierre",
+      "avatar": "https://people.healthsciences.ucla.edu/institution/photo?personnel%5fid=75145",
+      "phoneNumber": "718-444-5476",
+      "email": "",
+      "favorite": false
+    },
+    {
+      "id": 3,
+      "firstName": "Christie",
+      "lastName": "Jean",
+      "avatar": "",
+      "phoneNumber": "509-4386-9667",
+      "email": "cjean@gmail.com",
+      "favorite": true
+    },
+    {
+      "id": 4,
+      "firstName": "John",
+      "lastName": "Louis",
+      "avatar": "https://d2mjvz2lqjkhe7.cloudfront.net/as/assets-mem-com/cmi/5/2/5/9/8029525/20181023_173029573_0_orig.jpg/-/john-henry-dallas-tx-obituary.jpg?maxheight=650",
+      "phoneNumber": "917-600-5803",
+      "email": "jlouis@yahoo.com",
+      "favorite": false
+    },
+    {
+      "id": 5,
+      "firstName": "Stella",
+      "lastName": "Pierre Jean",
+      "avatar": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/designer-stella-jean-poses-during-the-vogue-fashion-dubai-news-photo-1593426289.jpg?crop=1.00xw:1.00xh;0,0&resize=980:*",
+      "phoneNumber": "347-547-2132",
+      "email": "stellajean@gmail.com",
+      "favorite": false
+    },
+    {
+      "id": 6,
+      "firstName": "Victoria",
+      "lastName": "Loves",
+      "avatar": "https://scontent-lga3-1.xx.fbcdn.net/v/t1.18169-9/11667417_1010907192253355_560810259189956056_n.jpg?_nc_cat=104&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=XLUAc7TXjhMAX9TuPHe&_nc_ht=scontent-lga3-1.xx&oh=a3e343c1e608a7a6644eddddb4d317a0&oe=61AE6E05",
+      "phoneNumber": "509-4386-9667",
+      "email": "",
+      "favorite": true
+    }
+  ]
+}
