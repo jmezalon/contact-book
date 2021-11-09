@@ -22,7 +22,7 @@ function ContactCard({
 
     return (
         <div className="contact-card">
-            {filterBy=== "lastName" ? <h4><em>{card.lastName}</em> {card.firstName} </h4> : <h4>{card.firstName} {card.lastName}</h4>}
+            {filterBy=== "lastName" ? <h4>{card.lastName}, <em>{card.firstName}</em></h4> : <h4>{card.firstName} {card.lastName}</h4>}
             <img src={ card.avatar || "https://thumbs.dreamstime.com/b/default-avatar-profile-flat-icon-vector-contact-symbol-illustration-184752213.jpg"} alt="contact-img" />
             <p>Phone: {card.phoneNumber}</p>
             <p>E-mail: {card.email}</p>
