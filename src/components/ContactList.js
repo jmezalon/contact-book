@@ -5,12 +5,13 @@ function ContactList({
   filterBy, 
   url, 
   phoneNumbers, 
-  onHandleDelete 
+  onHandleDelete ,
+  allContact
 }) {
 
     function handleFavClick(fixedContact) {
     
-        const updatedArr = phoneNumbers.map(contact => {
+        const updatedArr = allContact.map(contact => {
             if (contact.id === fixedContact.id) {
               return  fixedContact 
             } else {

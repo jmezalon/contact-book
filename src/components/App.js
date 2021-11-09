@@ -117,6 +117,7 @@ function App() {
         setPhoneNums={setPhoneNums} 
         onHandleDelete={handleDelete} 
         phoneNumbers={sortContact} 
+        allContact={phoneNums}
         filterBy={filterBy}
       />
     </div>

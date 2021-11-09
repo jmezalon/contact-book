@@ -25,7 +25,7 @@
       "avatar": "https://d2mjvz2lqjkhe7.cloudfront.net/as/assets-mem-com/cmi/5/2/5/9/8029525/20181023_173029573_0_orig.jpg/-/john-henry-dallas-tx-obituary.jpg?maxheight=650",
       "phoneNumber": "917-600-5803",
       "email": "jlouis@yahoo.com",
-      "favorite": false
+      "favorite": true
     },
     {
       "id": 5,
@@ -73,6 +73,45 @@
       "email": "cmezalon@gmail.com",
       "favorite": true,
       "id": 9
+    },
+    {
+      "name": "",
+      "firstName": "Jean Harol",
+      "lastName": "Pierre",
+      "avatar": "",
+      "phoneNumber": "3476663148",
+      "email": "jeanharolpierre@gmail.com",
+      "favorite": false,
+      "id": 10
+    },
+    {
+      "name": "",
+      "firstName": "Alexander",
+      "lastName": "Micheal",
+      "avatar": "https://i.pinimg.com/originals/7f/6d/40/7f6d401de353349134876057bd4c0a9b.jpg",
+      "phoneNumber": "347-678-3149",
+      "email": "alexm@yahoo.com",
+      "favorite": false,
+      "id": 11
+    },
+    {
+      "firstName": "Johnny",
+      "lastName": "Dane",
+      "avatar": "",
+      "phoneNumber": "",
+      "email": "jdane@gmail.com",
+      "favorite": false,
+      "id": 12
+    },
+    {
+      "name": "",
+      "firstName": "Louis",
+      "lastName": "Ville",
+      "avatar": "",
+      "phoneNumber": "347-908-3211",
+      "email": "",
+      "favorite": true,
+      "id": 13
     }
   ]
 }
