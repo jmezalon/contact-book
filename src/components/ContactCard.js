@@ -1,4 +1,10 @@
-function ContactCard({ onHandleFavClick, filterBy, url, card, onHandleDelete }) {
+function ContactCard({ 
+    onHandleFavClick, 
+    filterBy, 
+    url, 
+    card, 
+    onHandleDelete 
+}) {
     
     function handleAddFav() {
         fetch(`${url}/${card.id}`, {

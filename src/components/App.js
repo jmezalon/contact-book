@@ -1,5 +1,6 @@
 import ContactList from './ContactList'
 import Form from './Form'
+import Filter from './Filter'
 import { useState, useEffect } from 'react'
 const Base_URL = 'http://localhost:4000/contacts'
 
@@ -102,30 +103,14 @@ function App() {
   return (
     <div className="">
       <h1>My Contact-book Markup</h1>
-      <div className="filter-buttons">
-        <div className="left-side">
-
-          <button onClick={()=>setForm(!form)}>
-            {!form ? "Add Contact" : "Cancel"}
-          </button>
-
-          <label htmlFor="filter">By: </label>
-          <select 
-            name="nameFilter" 
-            value={filterBy} 
-            onChange={handleFilterChange}
-          >
-            <option value="firstName">First Name</option>
-            <option value="lastName">Last Name</option>
-          </select>
-        </div>
-
-        <div className="right-side">
-          <button onClick={()=>setFav('All')}>All</button>
-          <button onClick={()=>setFav(true)}>Favorites</button>
-        </div>
-
-      </div>
+      <Filter 
+        form={form} 
+        setForm={setForm} 
+        filterBy={filterBy}
+        setFilterBy={setFilterBy}
+        setFav={setFav}
+        onhandleFilterChange={handleFilterChange}
+      />
       {form ? <Form onHandleSubmit={handleSubmit} onHandleChange={handleChange} formData={formData} /> : null}
       <ContactList 
         url={Base_URL} 

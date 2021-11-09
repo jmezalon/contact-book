@@ -19,15 +19,6 @@
       "favorite": false
     },
     {
-      "id": 3,
-      "firstName": "Christie",
-      "lastName": "Jean",
-      "avatar": "",
-      "phoneNumber": "509-4386-9667",
-      "email": "cjean@gmail.com",
-      "favorite": true
-    },
-    {
       "id": 4,
       "firstName": "John",
       "lastName": "Louis",
@@ -53,6 +44,35 @@
       "phoneNumber": "509-4386-9667",
       "email": "",
       "favorite": true
+    },
+    {
+      "firstName": "Stephanie",
+      "lastName": "Lukos",
+      "avatar": "https://chrgj.org/wp-content/uploads/2018/12/Jennifer-Pierre-1024x682.jpg",
+      "phoneNumber": "347-980-9090",
+      "email": "stephluko@yahoo.com",
+      "favorite": false,
+      "id": 7
+    },
+    {
+      "name": "",
+      "firstName": "Caroline",
+      "lastName": "Alexis",
+      "avatar": "https://i.pinimg.com/originals/54/b3/d4/54b3d4a2e5c74facdd94b74ff2eea4d9.jpg",
+      "phoneNumber": "",
+      "email": "calexis@aol.com",
+      "favorite": true,
+      "id": 8
+    },
+    {
+      "name": "",
+      "firstName": "Christie",
+      "lastName": "Mezalon",
+      "avatar": "",
+      "phoneNumber": "509-32-05-8376",
+      "email": "cmezalon@gmail.com",
+      "favorite": true,
+      "id": 9
     }
   ]
 }

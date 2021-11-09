@@ -8,4 +8,4 @@ I am using react for the front-end. I have db.json file where I have some dummie
 My mvp is to allow the user to see their contact. Favorite their contacts, and delete a contact. I also want the user to be able to sort through their contacts, by last name or first name alphabetically
 
 # Stretch goals
-I would like the user to be able to do more than just favorite their contacts. I want them to be able to change the names, numbers, email, and pictures.
+I would like the user to be able to do more than just favorite their contacts. I want them to be able to change the names, numbers, email, and pictures. I want to add the dashes for the user if they add a phone number without them.
