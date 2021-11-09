@@ -1,6 +1,6 @@
 import ContactCard from './ContactCard'
 
-function ContactList({ setPhoneNums, url, phoneNumbers, onHandleDelete }) {
+function ContactList({ setPhoneNums, filterBy, url, phoneNumbers, onHandleDelete }) {
 
     function handleFavClick(fixedContact) {
     
@@ -19,6 +19,7 @@ function ContactList({ setPhoneNums, url, phoneNumbers, onHandleDelete }) {
             {phoneNumbers.map(phoneNum => <ContactCard 
                 key={phoneNum.id}
                 card={phoneNum} 
+                filterBy={filterBy}
                 onHandleDelete={onHandleDelete} 
                 onHandleFavClick={handleFavClick}
                 url={url} 

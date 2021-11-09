@@ -12,6 +12,10 @@ button {
     margin-right: 15px;
 }
 
+.left-side button {
+    margin-right: 15px;
+}
+
 .contact-form {
     margin-bottom: 15px;
     display: flex;
@@ -56,4 +60,13 @@ button {
 .bottom-button {
     display: flex;
     justify-content: space-around;
+}
+
+#fav-button {
+    cursor: pointer;
+}
+
+#del-button {
+    color: red;
+    cursor: pointer;
 }

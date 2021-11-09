@@ -7,6 +7,8 @@ function App() {
   const [phoneNums, setPhoneNums] = useState([])
   const [form, setForm] = useState(false)
   const [fav, setFav] = useState('All')
+  const [filterBy, setFilterBy] = useState('firstName')
+  let sortContact = phoneNums;
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -29,6 +31,24 @@ function App() {
       return number.favorite === fav
     }
   })
+
+  if (filterBy === "firstName") {
+    sortContact = displayFavs.sort((a, b) => {
+      let nameA = a.firstName.toUpperCase()
+      let nameB = b.firstName.toUpperCase()
+      if (nameA < nameB) return -1
+      if (nameA > nameB) return 1
+      return 0
+    })
+  } else if (filterBy === 'lastName') {
+    sortContact = displayFavs.sort((a, b) => {
+      let nameA = a.lastName.toUpperCase()
+      let nameB = b.lastName.toUpperCase()
+      if (nameA < nameB) return -1
+      if (nameA > nameB) return 1
+      return 0
+    })  
+  }
 
   function handleChange(e) {
     const key = e.target.name
@@ -70,7 +90,9 @@ function App() {
     setPhoneNums(updatedArr)
   }
 
-  
+  function handleFilterChange(e) {
+    setFilterBy(e.target.value)
+  }
 
   if(phoneNums.length === 0) {
     return <p>Loading...</p>
@@ -81,18 +103,36 @@ function App() {
     <div className="">
       <h1>My Contact-book Markup</h1>
       <div className="filter-buttons">
-        <button onClick={()=>setForm(!form)}>{!form ? "Add Contact" : "Cancel"}</button>
+        <div className="left-side">
+
+          <button onClick={()=>setForm(!form)}>
+            {!form ? "Add Contact" : "Cancel"}
+          </button>
+
+          <label htmlFor="filter">By: </label>
+          <select 
+            name="nameFilter" 
+            value={filterBy} 
+            onChange={handleFilterChange}
+          >
+            <option value="firstName">First Name</option>
+            <option value="lastName">Last Name</option>
+          </select>
+        </div>
+
         <div className="right-side">
           <button onClick={()=>setFav('All')}>All</button>
           <button onClick={()=>setFav(true)}>Favorites</button>
         </div>
+
       </div>
       {form ? <Form onHandleSubmit={handleSubmit} onHandleChange={handleChange} formData={formData} /> : null}
       <ContactList 
         url={Base_URL} 
         setPhoneNums={setPhoneNums} 
         onHandleDelete={handleDelete} 
-        phoneNumbers={displayFavs} 
+        phoneNumbers={sortContact} 
+        filterBy={filterBy}
       />
     </div>
   );
