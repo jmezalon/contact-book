@@ -105,6 +105,7 @@ function App() {
       <h1>My Contact-book Markup</h1>
       <Filter 
         form={form} 
+        fav={fav}
         setForm={setForm} 
         filterBy={filterBy}
         setFilterBy={setFilterBy}

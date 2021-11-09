@@ -8,6 +8,12 @@ button {
     margin-left: 15px;
 }
 
+.selected {
+    color: #100e0e;
+    /* font-weight: bold; */
+    background: #9bf9f978;
+}
+
 .right-side {
     margin-right: 15px;
 }
