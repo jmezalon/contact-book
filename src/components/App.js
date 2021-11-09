@@ -9,6 +9,7 @@ function App() {
   const [form, setForm] = useState(false)
   const [fav, setFav] = useState('All')
   const [filterBy, setFilterBy] = useState('firstName')
+  const [search, setSearch] = useState('')
   let sortContact = phoneNums;
   const [formData, setFormData] = useState({
     firstName: "",
@@ -31,6 +32,13 @@ function App() {
     } else {
       return number.favorite === fav
     }
+  }).filter(contact => {
+    if(contact.firstName.toLowerCase().includes(search.toLocaleLowerCase())) {
+      return true
+    } else if(contact.lastName.toLowerCase().includes(search.toLocaleLowerCase())) {
+      return true
+    }
+    return false
   })
 
   if (filterBy === "firstName") {
@@ -55,6 +63,10 @@ function App() {
     const key = e.target.name
     const value = e.target.type === "checkbox" ? e.target.checked : e.target.value 
     setFormData({...formData, [key]: value})
+  }
+
+  function handleSearchChange(e) {
+    setSearch(e.target.value)
   }
 
   function handleSubmit(e) {
@@ -100,6 +112,7 @@ function App() {
   }
 
   
+  
   return (
     <div className="">
       <h1>My Contact-book Markup</h1>
@@ -110,17 +123,25 @@ function App() {
         filterBy={filterBy}
         setFilterBy={setFilterBy}
         setFav={setFav}
+        search={search}
+        onHandleSearchChange={handleSearchChange}
         onhandleFilterChange={handleFilterChange}
       />
       {form ? <Form onHandleSubmit={handleSubmit} onHandleChange={handleChange} formData={formData} /> : null}
-      <ContactList 
-        url={Base_URL} 
-        setPhoneNums={setPhoneNums} 
-        onHandleDelete={handleDelete} 
-        phoneNumbers={sortContact} 
-        allContact={phoneNums}
-        filterBy={filterBy}
+      {
+        displayFavs.length === 0 && search 
+      ? 
+        <div id="no-result">No Results!</div> 
+      : 
+        <ContactList 
+          url={Base_URL} 
+          setPhoneNums={setPhoneNums} 
+          onHandleDelete={handleDelete} 
+          phoneNumbers={sortContact} 
+          allContact={phoneNums}
+          filterBy={filterBy}
       />
+      }
     </div>
   );
 }

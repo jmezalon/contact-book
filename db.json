@@ -43,7 +43,7 @@
       "avatar": "https://scontent-lga3-1.xx.fbcdn.net/v/t1.18169-9/11667417_1010907192253355_560810259189956056_n.jpg?_nc_cat=104&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=XLUAc7TXjhMAX9TuPHe&_nc_ht=scontent-lga3-1.xx&oh=a3e343c1e608a7a6644eddddb4d317a0&oe=61AE6E05",
       "phoneNumber": "509-4386-9667",
       "email": "",
-      "favorite": false
+      "favorite": true
     },
     {
       "firstName": "Stephanie",
@@ -61,7 +61,7 @@
       "avatar": "",
       "phoneNumber": "",
       "email": "calexis@aol.com",
-      "favorite": true,
+      "favorite": false,
       "id": 8
     },
     {

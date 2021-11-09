@@ -19,7 +19,7 @@ function ContactList({
             }
         })
         setPhoneNums(updatedArr)
-      }
+    }
 
     return(
         <div className="contact-list-container">

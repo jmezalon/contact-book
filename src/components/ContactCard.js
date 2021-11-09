@@ -20,6 +20,7 @@ function ContactCard({
         .then(fixContact => onHandleFavClick(fixContact))
     }
 
+    
     return (
         <div className="contact-card">
             {filterBy=== "lastName" ? <h4>{card.lastName}, <em>{card.firstName}</em></h4> : <h4>{card.firstName} {card.lastName}</h4>}

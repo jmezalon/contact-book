@@ -22,6 +22,11 @@ button {
     margin-right: 15px;
 }
 
+#search-input {
+    margin-left: 15px;
+    border-radius: 5px;
+}
+
 .contact-form {
     margin-bottom: 15px;
     display: flex;
@@ -75,4 +80,12 @@ button {
 #del-button {
     color: red;
     cursor: pointer;
+}
+
+#no-result {
+    width: 300px;
+    margin: auto;
+    margin-top: 30px;
+    font-weight: bold;
+    color: dimgrey;
 }
