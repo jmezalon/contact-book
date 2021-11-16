@@ -1,6 +1,8 @@
 .filter-buttons {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 20px;
+    width: 90%;
 }
 
 button {
@@ -28,21 +30,38 @@ button {
 }
 
 .contact-form {
+    box-shadow: 4px 4px 8px 0px rgb(0, 0, 0, 0.2);
     margin-bottom: 15px;
     display: flex;
     flex-direction: column;
-    padding: 15px;
-    margin-left: 20px;
-    align-items: flex-start;
+    background-color: lightcyan;
+    align-items: center;
+    padding: 10px;
+    width: 250px;
+    height: 225px;
+    border: 1px black solid;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-bottom: 25px;
+    padding-top: 5px;
   }
   
   .contact-form input {
     margin-top: 10px;
+    height: 20px;
+    width: 175px;
+  }
+
+  #fav-input {
+    width: auto;
+    height: auto;
+    margin-bottom: 15px;
   }
 
 .contact-list-container {
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-around; */
     flex-wrap: wrap;
 }
 
@@ -56,8 +75,8 @@ button {
     padding-bottom: 25px;
     padding-top: 5px;
     padding-left: 20px;
-    /* display: flex;
-    flex-direction: column; */
+    margin-right: 20px;
+    box-shadow: 4px 4px 8px 0px rgb(0, 0, 0, 0.2);
     align-items: center;
     background: lightcyan;
 }
