@@ -9,16 +9,16 @@ function Filter({
   setFav,
   onHandleSearchChange,
 }) {
-  const [selected, setSelected] = useState(false);
+  const [selected, setSelected] = useState(true);
 
   function handleFavClick() {
     setFav("All");
-    setSelected(!selected);
+    setSelected(true);
   }
 
   function handleAllClick() {
     setFav(true);
-    setSelected(!selected);
+    setSelected(false);
   }
 
   return (
