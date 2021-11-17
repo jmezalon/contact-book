@@ -130,13 +130,13 @@ function App() {
         onHandleSearchChange={handleSearchChange}
         onhandleFilterChange={handleFilterChange}
       />
-      {form ? (
+      {form && (
         <Form
           onHandleSubmit={handleSubmit}
           onHandleChange={handleChange}
           formData={formData}
         />
-      ) : null}
+      )}
       {displayFavs.length === 0 && search ? (
         <div id="no-result">No Results!</div>
       ) : (
