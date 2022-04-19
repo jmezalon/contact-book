@@ -2,7 +2,8 @@ import ContactList from "./ContactList";
 import Form from "./Form";
 import Filter from "./Filter";
 import { useState, useEffect } from "react";
-const Base_URL = "https://contacts-book-w-express.herokuapp.com/contacts";
+// const Base_URL = "https://contacts-book-w-express.herokuapp.com/contacts";  // production
+const Base_URL = "http://localhost:4000/contacts"; // development
 
 function App() {
   const [phoneNums, setPhoneNums] = useState([]);
@@ -24,7 +25,8 @@ function App() {
     fetch(Base_URL)
       .then((r) => r.json())
       .then((data) => {
-        setPhoneNums(data.contacts);
+        setPhoneNums(data);
+        // setPhoneNums(data.contacts); // production
       });
   }, []);
 
