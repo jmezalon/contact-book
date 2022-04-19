@@ -23,29 +23,33 @@ function App() {
   useEffect(() => {
     fetch(Base_URL)
       .then((r) => r.json())
-      .then((contacts) => setPhoneNums(contacts));
+      .then((data) => {
+        setPhoneNums(data.contacts);
+      });
   }, []);
 
-  const displayFavs = phoneNums
-    .filter((number) => {
-      if (fav === "All") {
-        return true;
-      } else {
-        return number.favorite === fav;
-      }
-    })
-    .filter((contact) => {
-      if (
-        contact.firstName.toLowerCase().includes(search.toLocaleLowerCase())
-      ) {
-        return true;
-      } else if (
-        contact.lastName.toLowerCase().includes(search.toLocaleLowerCase())
-      ) {
-        return true;
-      }
-      return false;
-    });
+  const displayFavs =
+    phoneNums &&
+    phoneNums
+      .filter((number) => {
+        if (fav === "All") {
+          return true;
+        } else {
+          return number.favorite === fav;
+        }
+      })
+      .filter((contact) => {
+        if (
+          contact.firstName.toLowerCase().includes(search.toLocaleLowerCase())
+        ) {
+          return true;
+        } else if (
+          contact.lastName.toLowerCase().includes(search.toLocaleLowerCase())
+        ) {
+          return true;
+        }
+        return false;
+      });
 
   if (filterBy === "firstName") {
     sortContact = displayFavs.sort((a, b) => {
