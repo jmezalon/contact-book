@@ -3,7 +3,9 @@ import Form from "./Form";
 import Filter from "./Filter";
 import { useState, useEffect } from "react";
 // const Base_URL = "https://contacts-book-w-express.herokuapp.com/contacts"; // production
-const Base_URL = "http://localhost:3333/contacts"; // development
+// const Base_URL = "http://localhost:3333/contacts"; // development with postgresql
+const Base_URL = "http://localhost:4000/contacts"; // development with mock json server
+// you can start mock json server with this comment: $ json-server --watch db.json --port 4000
 
 function App() {
   const [phoneNums, setPhoneNums] = useState([]);
@@ -25,7 +27,6 @@ function App() {
     fetch(Base_URL)
       .then((r) => r.json())
       .then((data) => {
-        // console.log(data);
         setPhoneNums(data);
         // setPhoneNums(data.contacts); // production
       });
