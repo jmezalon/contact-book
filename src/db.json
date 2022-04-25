@@ -1,0 +1,155 @@
+{
+  "contacts": [
+    {
+      "id": 1,
+      "firstname": "Max",
+      "lastname": "Mezalon",
+      "avatar": "https://jmezalon.github.io/all-about-Max/images/Max_sitting.PNG",
+      "phonenumber": "347-486-8720",
+      "email": "jmezalon@gmail.com",
+      "is_favorite": true
+    },
+    {
+      "id": 2,
+      "firstname": "Joseph",
+      "lastname": "Pierre",
+      "avatar": "https://people.healthsciences.ucla.edu/institution/photo?personnel%5fid=75145",
+      "phonenumber": "718-444-5476",
+      "email": "",
+      "is_favorite": true
+    },
+    {
+      "id": 4,
+      "firstname": "John",
+      "lastname": "Louis",
+      "avatar": "https://d2mjvz2lqjkhe7.cloudfront.net/as/assets-mem-com/cmi/5/2/5/9/8029525/20181023_173029573_0_orig.jpg/-/john-henry-dallas-tx-obituary.jpg?maxheight=650",
+      "phonenumber": "917-600-5803",
+      "email": "jlouis@yahoo.com",
+      "is_favorite": true
+    },
+    {
+      "id": 5,
+      "firstname": "Stella",
+      "lastname": "Pierre Jean",
+      "avatar": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/designer-stella-jean-poses-during-the-vogue-fashion-dubai-news-photo-1593426289.jpg?crop=1.00xw:1.00xh;0,0&resize=980:*",
+      "phonenumber": "347-547-2132",
+      "email": "stellajean@gmail.com",
+      "is_favorite": false
+    },
+    {
+      "id": 6,
+      "firstname": "Victoria",
+      "lastname": "Loves",
+      "avatar": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/queen-victoria-of-england-1641334344.jpg",
+      "phonenumber": "509-4386-9667",
+      "email": "",
+      "is_favorite": true
+    },
+    {
+      "firstname": "Stephanie",
+      "lastname": "Lukos",
+      "avatar": "https://chrgj.org/wp-content/uploads/2018/12/Jennifer-Pierre-1024x682.jpg",
+      "phonenumber": "347-980-9090",
+      "email": "stephluko@yahoo.com",
+      "is_favorite": false,
+      "id": 7
+    },
+    {
+      "name": "",
+      "firstname": "Caroline",
+      "lastname": "Alexis",
+      "avatar": "",
+      "phonenumber": "",
+      "email": "calexis@aol.com",
+      "is_favorite": true,
+      "id": 8
+    },
+    {
+      "name": "",
+      "firstname": "Christie",
+      "lastname": "Mezalon",
+      "avatar": "https://images.pexels.com/photos/2625122/pexels-photo-2625122.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      "phonenumber": "509-32-05-8376",
+      "email": "cmezalon@gmail.com",
+      "is_favorite": true,
+      "id": 9
+    },
+    {
+      "name": "",
+      "firstname": "Jean Harol",
+      "lastname": "Pierre",
+      "avatar": "",
+      "phonenumber": "3476663148",
+      "email": "jeanharolpierre@gmail.com",
+      "is_favorite": false,
+      "id": 10
+    },
+    {
+      "name": "",
+      "firstname": "Alexander",
+      "lastname": "Micheal",
+      "avatar": "https://i.pinimg.com/originals/7f/6d/40/7f6d401de353349134876057bd4c0a9b.jpg",
+      "phonenumber": "347-678-3149",
+      "email": "alexm@yahoo.com",
+      "is_favorite": true,
+      "id": 11
+    },
+    {
+      "firstname": "Johnny",
+      "lastname": "Dane",
+      "avatar": "",
+      "phonenumber": "",
+      "email": "jdane@gmail.com",
+      "is_favorite": false,
+      "id": 12
+    },
+    {
+      "name": "",
+      "firstname": "Louis",
+      "lastname": "Ville",
+      "avatar": "",
+      "phonenumber": "347-908-3211",
+      "email": "",
+      "is_favorite": false,
+      "id": 13
+    },
+    {
+      "firstname": "Anne",
+      "lastname": "Obama",
+      "avatar": "https://www.castanet.net/obituaries/funeralhomes/0/20621/bertrand_julie_anne_jules.jpg?1586961854",
+      "phonenumber": "321-987-4567",
+      "email": "anneabama@gmail.com",
+      "is_favorite": false,
+      "id": 14
+    },
+    {
+      "name": "",
+      "firstname": "Trisha",
+      "lastname": "Daniel",
+      "avatar": "https://i.pinimg.com/736x/de/05/23/de0523290d04b2b6f8acbaa3db5cc4d8.jpg",
+      "phonenumber": "321-987-0909",
+      "email": "tdan@aol.com",
+      "is_favorite": false,
+      "id": 15
+    },
+    {
+      "firstname": "Abid",
+      "lastname": "Ali",
+      "avatar": "https://media-cldnry.s-nbcnews.com/image/upload/newscms/2021_44/3517472/211105-aaron-rodgers-ew-348p.jpg",
+      "phonenumber": "347-541-6787",
+      "email": "abali@aol.com",
+      "is_favorite": false,
+      "id": 16
+    },
+    {
+      "name": "",
+      "firstname": "Abby",
+      "lastname": "Aisha",
+      "avatar": "https://i.pinimg.com/originals/54/b3/d4/54b3d4a2e5c74facdd94b74ff2eea4d9.jpg",
+      "phonenumber": "321-654-9809",
+      "email": "aabby@aol.com",
+      "is_favorite": false,
+      "id": 17
+    }
+  ]
+}
