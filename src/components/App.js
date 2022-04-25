@@ -2,29 +2,30 @@ import ContactList from "./ContactList";
 import Form from "./Form";
 import Filter from "./Filter";
 import { useState, useEffect } from "react";
-// const Base_URL = "https://contacts-book-w-express.herokuapp.com/contacts";  // production
-const Base_URL = "http://localhost:4000/contacts"; // development
+// const Base_URL = "https://contacts-book-w-express.herokuapp.com/contacts"; // production
+const Base_URL = "http://localhost:3333/contacts"; // development
 
 function App() {
   const [phoneNums, setPhoneNums] = useState([]);
   const [form, setForm] = useState(false);
   const [fav, setFav] = useState("All");
-  const [filterBy, setFilterBy] = useState("firstName");
+  const [filterBy, setFilterBy] = useState("firstname");
   const [search, setSearch] = useState("");
   let sortContact = phoneNums;
   const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
+    firstname: "",
+    lastname: "",
     avatar: "",
-    phoneNumber: "",
+    phonenumber: "",
     email: "",
-    favorite: false,
+    is_favorite: false,
   });
 
   useEffect(() => {
     fetch(Base_URL)
       .then((r) => r.json())
       .then((data) => {
+        // console.log(data);
         setPhoneNums(data);
         // setPhoneNums(data.contacts); // production
       });
@@ -37,34 +38,34 @@ function App() {
         if (fav === "All") {
           return true;
         } else {
-          return number.favorite === fav;
+          return number.is_favorite === fav;
         }
       })
       .filter((contact) => {
         if (
-          contact.firstName.toLowerCase().includes(search.toLocaleLowerCase())
+          contact.firstname.toLowerCase().includes(search.toLocaleLowerCase())
         ) {
           return true;
         } else if (
-          contact.lastName.toLowerCase().includes(search.toLocaleLowerCase())
+          contact.lastname.toLowerCase().includes(search.toLocaleLowerCase())
         ) {
           return true;
         }
         return false;
       });
 
-  if (filterBy === "firstName") {
+  if (filterBy === "firstname") {
     sortContact = displayFavs.sort((a, b) => {
-      let nameA = a.firstName.toUpperCase();
-      let nameB = b.firstName.toUpperCase();
+      let nameA = a.firstname.toUpperCase();
+      let nameB = b.firstname.toUpperCase();
       if (nameA < nameB) return -1;
       if (nameA > nameB) return 1;
       return 0;
     });
-  } else if (filterBy === "lastName") {
+  } else if (filterBy === "lastname") {
     sortContact = displayFavs.sort((a, b) => {
-      let nameA = a.lastName.toUpperCase();
-      let nameB = b.lastName.toUpperCase();
+      let nameA = a.lastname.toUpperCase();
+      let nameB = b.lastname.toUpperCase();
       if (nameA < nameB) return -1;
       if (nameA > nameB) return 1;
       return 0;
@@ -97,12 +98,12 @@ function App() {
 
     setFormData({
       name: "",
-      firstName: "",
-      lastName: "",
+      firstname: "",
+      lastname: "",
       avatar: "",
-      phoneNumber: "",
+      phonenumber: "",
       email: "",
-      favorite: false,
+      is_favorite: false,
     });
     setForm(false);
   }

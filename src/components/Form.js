@@ -6,8 +6,8 @@ function Form({ formData, onHandleChange, onHandleSubmit }) {
           aria-label="first Name"
           placeholder="First Name"
           type="text"
-          name="firstName"
-          value={formData.firstName}
+          name="firstname"
+          value={formData.firstname}
           onChange={onHandleChange}
         />
       </label>
@@ -16,8 +16,8 @@ function Form({ formData, onHandleChange, onHandleSubmit }) {
           aria-label="last Name"
           placeholder="Last Name"
           type="text"
-          name="lastName"
-          value={formData.lastName}
+          name="lastname"
+          value={formData.lastname}
           onChange={onHandleChange}
         />
       </label>
@@ -36,8 +36,8 @@ function Form({ formData, onHandleChange, onHandleSubmit }) {
           aria-label="phone number"
           placeholder="Phone Number"
           type="tel"
-          name="phoneNumber"
-          value={formData.phoneNumber}
+          name="phonenumber"
+          value={formData.phonenumber}
           onChange={onHandleChange}
         />
       </label>
@@ -57,8 +57,8 @@ function Form({ formData, onHandleChange, onHandleSubmit }) {
           aria-label="favorite"
           id="fav-input"
           type="checkbox"
-          name="favorite"
-          value={formData.favorite}
+          name="is_favorite"
+          value={formData.is_favorite}
           onChange={onHandleChange}
         />
       </label>

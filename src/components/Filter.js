@@ -34,8 +34,8 @@ function Filter({
           value={filterBy}
           onChange={onhandleFilterChange}
         >
-          <option value="firstName">First Name</option>
-          <option value="lastName">Last Name</option>
+          <option value="firstname">First Name</option>
+          <option value="lastname">Last Name</option>
         </select>
         <input
           type="text"
