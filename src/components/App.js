@@ -2,23 +2,23 @@ import ContactList from "./ContactList";
 import Form from "./Form";
 import Filter from "./Filter";
 import { useState, useEffect } from "react";
-// const Base_URL = "https://contacts-book-w-express.herokuapp.com/contacts"; // production
+const Base_URL = "https://contacts-book-w-express.herokuapp.com/contacts"; // production
 // const Base_URL = "http://localhost:3333/contacts"; // development with postgresql
-const Base_URL = "http://localhost:4000/contacts"; // development with mock json server
+// const Base_URL = "http://localhost:4000/contacts"; // development with mock json server
 // you can start mock json server with this comment: $ json-server --watch db.json --port 4000
 
 function App() {
   const [phoneNums, setPhoneNums] = useState([]);
   const [form, setForm] = useState(false);
   const [fav, setFav] = useState("All");
-  const [filterBy, setFilterBy] = useState("firstname");
+  const [filterBy, setFilterBy] = useState("first_name");
   const [search, setSearch] = useState("");
   let sortContact = phoneNums;
   const [formData, setFormData] = useState({
-    firstname: "",
-    lastname: "",
+    first_name: "",
+    last_name: "",
     avatar: "",
-    phonenumber: "",
+    phone_number: "",
     email: "",
     is_favorite: false,
   });
@@ -27,8 +27,8 @@ function App() {
     fetch(Base_URL)
       .then((r) => r.json())
       .then((data) => {
-        setPhoneNums(data);
-        // setPhoneNums(data.contacts); // production
+        // setPhoneNums(data);
+        setPhoneNums(data.contacts); // production
       });
   }, []);
 
@@ -44,29 +44,29 @@ function App() {
       })
       .filter((contact) => {
         if (
-          contact.firstname.toLowerCase().includes(search.toLocaleLowerCase())
+          contact.first_name.toLowerCase().includes(search.toLocaleLowerCase())
         ) {
           return true;
         } else if (
-          contact.lastname.toLowerCase().includes(search.toLocaleLowerCase())
+          contact.last_name.toLowerCase().includes(search.toLocaleLowerCase())
         ) {
           return true;
         }
         return false;
       });
 
-  if (filterBy === "firstname") {
+  if (filterBy === "first_name") {
     sortContact = displayFavs.sort((a, b) => {
-      let nameA = a.firstname.toUpperCase();
-      let nameB = b.firstname.toUpperCase();
+      let nameA = a.first_name.toUpperCase();
+      let nameB = b.first_name.toUpperCase();
       if (nameA < nameB) return -1;
       if (nameA > nameB) return 1;
       return 0;
     });
-  } else if (filterBy === "lastname") {
+  } else if (filterBy === "last_name") {
     sortContact = displayFavs.sort((a, b) => {
-      let nameA = a.lastname.toUpperCase();
-      let nameB = b.lastname.toUpperCase();
+      let nameA = a.last_name.toUpperCase();
+      let nameB = b.last_name.toUpperCase();
       if (nameA < nameB) return -1;
       if (nameA > nameB) return 1;
       return 0;
@@ -99,10 +99,10 @@ function App() {
 
     setFormData({
       name: "",
-      firstname: "",
-      lastname: "",
+      first_name: "",
+      last_name: "",
       avatar: "",
-      phonenumber: "",
+      phone_number: "",
       email: "",
       is_favorite: false,
     });
@@ -135,6 +135,7 @@ function App() {
         filterBy={filterBy}
         setFav={setFav}
         search={search}
+        setSearch={setSearch}
         onHandleSearchChange={handleSearchChange}
         onhandleFilterChange={handleFilterChange}
       />

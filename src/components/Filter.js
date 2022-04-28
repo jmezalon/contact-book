@@ -4,6 +4,7 @@ function Filter({
   form,
   onhandleFilterChange,
   search,
+  setSearch,
   setForm,
   filterBy,
   setFav,
@@ -12,11 +13,13 @@ function Filter({
   const [selected, setSelected] = useState(true);
 
   function handleFavClick() {
+    setSearch("");
     setFav("All");
     setSelected(true);
   }
 
   function handleAllClick() {
+    setSearch("");
     setFav(true);
     setSelected(false);
   }
@@ -34,13 +37,14 @@ function Filter({
           value={filterBy}
           onChange={onhandleFilterChange}
         >
-          <option value="firstname">First Name</option>
-          <option value="lastname">Last Name</option>
+          <option value="first_name">First Name</option>
+          <option value="last_name">Last Name</option>
         </select>
         <input
           type="text"
           placeholder="Search contacts..."
           name={search}
+          value={search}
           onChange={onHandleSearchChange}
           id="search-input"
         />

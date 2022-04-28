@@ -21,13 +21,13 @@ function ContactCard({
 
   return (
     <div className="contact-card">
-      {filterBy === "lastname" ? (
+      {filterBy === "last_name" ? (
         <h4>
-          {card.lastname}, <em>{card.firstname}</em>
+          {card.last_name}, <em>{card.first_name}</em>
         </h4>
       ) : (
         <h4>
-          {card.firstname} {card.lastname}
+          {card.first_name} {card.last_name}
         </h4>
       )}
       <img
@@ -37,7 +37,7 @@ function ContactCard({
         }
         alt="contact-img"
       />
-      <p>Phone: {card.phonenumber}</p>
+      <p>Phone: {card.phone_number}</p>
       <p>E-mail: {card.email}</p>
       <div className="bottom-button">
         <p onClick={handleAddFav} id="fav-button">
