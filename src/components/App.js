@@ -27,8 +27,7 @@ function App() {
     fetch(Base_URL)
       .then((r) => r.json())
       .then((data) => {
-        // setPhoneNums(data);
-        setPhoneNums(data.contacts); // production
+        setPhoneNums(data);
       });
   }, []);
 
