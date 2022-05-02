@@ -45,13 +45,19 @@ button {
     margin-bottom: 10px;
     padding-bottom: 25px;
     padding-top: 5px;
+
+    input {
+        margin-top: 10px;
+        height: 20px;
+        width: 175px;
+      }
   }
   
-  .contact-form input {
-    margin-top: 10px;
-    height: 20px;
-    width: 175px;
-  }
+//   .contact-form input {
+//     margin-top: 10px;
+//     height: 20px;
+//     width: 175px;
+//   }
 
   #fav-input {
     width: auto;
@@ -79,13 +85,19 @@ button {
     box-shadow: 4px 4px 8px 0px rgb(0, 0, 0, 0.2);
     align-items: center;
     background: lightcyan;
+
+    img {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+    }
 }
 
-.contact-card img {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-}
+// .contact-card img {
+//     width: 200px;
+//     height: 200px;
+//     border-radius: 50%;
+// }
 
 .bottom-button {
     display: flex;
